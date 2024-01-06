@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="icon" type="image/x-icon" href="./assets/LSG Gradient Favicon 3.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/LSG Gradient Favicon 3.png"
+    />
     <link
       rel="stylesheet"
       href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
@@ -15,7 +19,7 @@
   <!-- The main code starts here -->
   <body class="pages-container main">
     <video autoplay muted loop>
-      <source src="./assets/LSG Animation 2.mp4" type="video/mp4">
+      <source src="./assets/LSG Animation 2.mp4" type="video/mp4" />
     </video>
     <!-- The LSG logo -->
     <nav class="home-nav logo_for_welcome">
@@ -123,6 +127,7 @@
     <!-- the script starts here -->
     <script>
       const wordContainer = document.getElementById("wordContainer");
+      const caret = document.getElementById("caret");
       const header = document.querySelector(".we_exist");
       const wordsSets = [
         ["Raise the potential of the human race"],
@@ -136,51 +141,36 @@
       ];
 
       let currentIndex = 0;
-
-      function typewrite(text, element, callback) {
-        const characters = text.split("");
-        let charIndex = 0;
-
-        const intervalId = setInterval(() => {
-          if (charIndex < characters.length) {
-            element.textContent += characters[charIndex];
-            charIndex++;
-          } else {
-            clearInterval(intervalId);
-            setTimeout(callback, 500); 
-          }
-        }, 100); 
-      }
+      let currentCharIndex = 0;
+      let caretVisible = true;
 
       function displayWords() {
-        header.textContent = ""; 
-        wordContainer.innerHTML = ""; 
-
         const wordsSet = wordsSets[currentIndex];
+        const currentWord = wordsSet[0];
 
-        Promise.all([
-          new Promise((resolve) =>
-            typewrite(
-              currentIndex < 4 ? "We exist to" : "We Believe In",
-              header,
-              resolve
-            )
-          ),
-          ...wordsSet.map(
-            (sentence) =>
-              new Promise((resolve) => {
-                const span = document.createElement("span");
-                wordContainer.appendChild(span);
-                typewrite(sentence, span, resolve);
-              })
-          ),
-        ]).then(() => {
+        if (currentIndex < 4) {
+          header.textContent = "We exist to";
+        } else {
+          header.textContent = "We Believe In";
+        }
+
+        const wordWithCaret =
+          currentWord.substring(0, currentCharIndex) +
+          (caretVisible ? "<span>|</span>" : "");
+        wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
+
+        currentCharIndex++;
+
+        if (currentCharIndex > currentWord.length) {
+          currentCharIndex = 0;
           currentIndex = (currentIndex + 1) % wordsSets.length;
-          setTimeout(displayWords, 1000); 
-        });
+        }
+
+        caretVisible = !caretVisible;
       }
 
-      displayWords(); 
+      setInterval(displayWords, 200);
+      displayWords();
     </script>
     <!-- The scripts end here -->
   </body>
