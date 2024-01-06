@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/grafiitilogoog.png" />
+    <title>Comapany</title>
+  </head>
+  <body class="pages-container">
+    <nav class="home-nav">
+      <div class="nav-image fade-in">
+        <a href="./index.html"><img src="./assets/LSG LOGO WHITE.png" alt="logo" /></a>
+      </div>
+      <div class="link-container">
+        <ul class="link-list fade-in2">
+          <li><a class="nav-links" id="nav-item1" href="./about.html">About</a></li>
+          <li><a class="nav-links" id="nav-item2" href="./wdim.html">WDIM?</a></li>
+          <li><a class="nav-links" id="nav-item3" href="./company.html">Company</a></li>
+          <li><a class="nav-links" id="nav-item4" href="./newsroom.html">Newsroom</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+     <script>
+      let activeNav = document.getElementById("nav-item3")
+    if (document.title ===  "Comapany"){
+        console.log("hey")
+        activeNav.style.color = "blue"
+    }
+    </script>
+  </body>
+</html>
