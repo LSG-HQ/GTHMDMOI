@@ -218,7 +218,7 @@ canvas {
   inline-size: 700px;
   margin-top: 20px;
   margin-left: -18px;
-  transform: scale(0.94);
+  /* transform: scale(0.94); */
   font-weight: bold;
   /* animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1); */
   width: 600px;
