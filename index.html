@@ -144,32 +144,57 @@
       let currentCharIndex = 0;
       let caretVisible = true;
 
-      function displayWords() {
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function typeText(element, text) {
+        for (let char of text) {
+          element.textContent += char;
+          await sleep(130);
+        }
+      }
+
+      async function typeWord(word) {
+        const wordWithCaret =
+          word.substring(0, currentCharIndex) +
+          (caretVisible ? "<span class='caret'>|</span>" : "");
+        wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
+        currentCharIndex++;
+
+        await sleep(100);
+
+        if (currentCharIndex <= word.length) {
+          await typeWord(word);
+        } else {
+          currentCharIndex = 0;
+          caretVisible = true; // Reset caret visibility after each word
+        }
+      }
+
+      async function displayWords() {
         const wordsSet = wordsSets[currentIndex];
         const currentWord = wordsSet[0];
 
+        header.textContent = ""; // Reset header text
+
+        // Type the header and word simultaneously
         if (currentIndex < 4) {
-          header.textContent = "We exist to";
+          await Promise.all([
+            typeText(header, "We exist to"),
+            typeWord(currentWord),
+          ]);
         } else {
-          header.textContent = "We Believe In";
+          await Promise.all([
+            typeText(header, "We Believe In"),
+            typeWord(currentWord),
+          ]);
         }
 
-        const wordWithCaret =
-          currentWord.substring(0, currentCharIndex) +
-          (caretVisible ? "<span>|</span>" : "");
-        wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
-
-        currentCharIndex++;
-
-        if (currentCharIndex > currentWord.length) {
-          currentCharIndex = 0;
-          currentIndex = (currentIndex + 1) % wordsSets.length;
-        }
-
-        caretVisible = !caretVisible;
+        currentIndex = (currentIndex + 1) % wordsSets.length;
       }
 
-      setInterval(displayWords, 130);
+      setInterval(displayWords, 4000); // Adjust the interval as needed
       displayWords();
     </script>
     <!-- The scripts end here -->
