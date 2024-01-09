@@ -126,76 +126,76 @@
 
     <!-- the script starts here -->
     <script>
-      const wordContainer = document.getElementById("wordContainer");
-      const caret = document.getElementById("caret");
-      const header = document.querySelector(".we_exist");
-      const wordsSets = [
-        ["Raise the potential of the human race"],
-        ["Inspire life without limits"],
-        ["Build the future"],
-        ["Disrespect the impossible"],
-        ["Playing infinite games"],
-        ["Technology"],
-        ["Delivering on hope"],
-        ["Ourselves"],
-      ];
+const wordContainer = document.getElementById("wordContainer");
+const caret = document.getElementById("caret");
+const header = document.querySelector(".we_exist");
+const wordsSets = [
+  ["Raise the potential of the human race"],
+  ["Inspire life without limits"],
+  ["Build the future"],
+  ["Disrespect the impossible"],
+  ["Playing infinite games"],
+  ["Technology"],
+  ["Delivering on hope"],
+  ["Ourselves"],
+];
 
-      let currentIndex = 0;
-      let currentCharIndex = 0;
-      let caretVisible = true;
+let currentIndex = 0;
+let currentCharIndex = 0;
+let caretVisible = true;
 
-      function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-      async function typeText(element, text) {
-        for (let char of text) {
-          element.textContent += char;
-          await sleep(130);
-        }
-      }
+async function typeText(element, text) {
+  for (let char of text) {
+    element.textContent += char;
+    await sleep(80);
+  }
+}
 
-      async function typeWord(word) {
-        const wordWithCaret =
-          word.substring(0, currentCharIndex) +
-          (caretVisible ? "<span class='caret'>|</span>" : "");
-        wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
-        currentCharIndex++;
+async function typeWord(word) {
+  const wordWithCaret = word.substring(0, currentCharIndex) +
+    (caretVisible ? "<span class='caret'>|</span>" : "");
+  wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
+  currentCharIndex++;
 
-        await sleep(100);
+  await sleep(80);
 
-        if (currentCharIndex <= word.length) {
-          await typeWord(word);
-        } else {
-          currentCharIndex = 0;
-          caretVisible = true; // Reset caret visibility after each word
-        }
-      }
+  if (currentCharIndex <= word.length) {
+    await typeWord(word);
+  } else {
+    currentCharIndex = 0;
+    caretVisible = true; // Reset caret visibility after each word
+  }
+}
 
-      async function displayWords() {
-        const wordsSet = wordsSets[currentIndex];
-        const currentWord = wordsSet[0];
+async function displayWords() {
+  const wordsSet = wordsSets[currentIndex];
+  const currentWord = wordsSet[0];
 
-        header.textContent = ""; // Reset header text
+  header.textContent = ""; // Reset header text
 
-        // Type the header and word simultaneously
-        if (currentIndex < 4) {
-          await Promise.all([
-            typeText(header, "We exist to"),
-            typeWord(currentWord),
-          ]);
-        } else {
-          await Promise.all([
-            typeText(header, "We Believe In"),
-            typeWord(currentWord),
-          ]);
-        }
+  // Type the header and word simultaneously
+  if (currentIndex < 4) {
+    await Promise.all([typeText(header, "We exist to"), typeWord(currentWord)]);
+  } else {
+    await Promise.all([typeText(header, "We Believe In"), typeWord(currentWord)]);
+  }
 
-        currentIndex = (currentIndex + 1) % wordsSets.length;
-      }
+  currentIndex = (currentIndex + 1) % wordsSets.length;
+}
 
-      setInterval(displayWords, 4000); // Adjust the interval as needed
-      displayWords();
+function toggleCaret() {
+  caretVisible = !caretVisible;
+  const caretElement = document.querySelector(".caret");
+  caretElement.style.visibility = caretVisible ? "visible" : "hidden";
+}
+
+setInterval(displayWords, 4000); // Adjust the interval as needed
+setInterval(toggleCaret, 100); // Adjust the interval for caret blinking
+displayWords();
     </script>
     <!-- The scripts end here -->
   </body>
