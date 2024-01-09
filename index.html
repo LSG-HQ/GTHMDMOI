@@ -151,7 +151,7 @@ function sleep(ms) {
 async function typeText(element, text) {
   for (let char of text) {
     element.textContent += char;
-    await sleep(80);
+    await sleep(100);
   }
 }
 
@@ -161,7 +161,7 @@ async function typeWord(word) {
   wordContainer.innerHTML = `<div>${wordWithCaret}</div>`;
   currentCharIndex++;
 
-  await sleep(80);
+  await sleep(100);
 
   if (currentCharIndex <= word.length) {
     await typeWord(word);
