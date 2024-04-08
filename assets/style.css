@@ -376,53 +376,6 @@ video {
   min-height: 100%;
   z-index:-100;
 }
-@media (min-width: 992px) {
-  /* body {
-    align-items: center;
-    color: black;
-  } */
-
-  /* .we_exist{
-    font-size: 5em;
-  } */
-  /* #wordContainer{
-    font-size: 10em;
-    width: 50%;
-  } */
-
-}
-/* .blink-caret {
-  display: inline-block;
-  width: 0.2em;
-  height: 1.2em;
-  margin-left: 2px;
-  background-color: #fff;
-  animation: blink-caret 0.7s infinite;
-}
-
-@keyframes blink-caret {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.typing-demo::after {
-  content: '|';
-  display: inline-block;
-  animation: blink-caret 1s infinite;
-}
-
-@keyframes blink-caret {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-} */
-
 
 @media screen and (max-width: 500px) {
   body{
