@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/home.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="Word">Beat The Impossible</div>
+    <!-- media query header -->
+    <ul id="navLinks">
+      <li class="each_word home">Home</li>
+      <li class="each_word">About</li>
+      <li class="each_word">WDIM</li>
+      <li class="each_word">Company</li>
+      <li class="each_word">Contact</li>
+      <li class="each_word">
+        <button class="back_button_media">
+          Back to main menu
+          <svg
+            class="backArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m5.828 7l2.536 2.535L6.95 10.95L2 6l4.95-4.95l1.414 1.415L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 0 0 0-12z"
+            />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <svg
+          class="search_media"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="m16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426M10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12"
+          />
+        </svg>
+      </li>
+    </ul>
+    <!-- media query header ends here -->
+
+    <!-- Actual header for desktop view -->
+    <header id="navbar" class="header">
+      <nav class="main_nav">
+        <div class="logo">
+          <img
+            class="logo"
+            src="./assets/images/Gradient Logo X 1.png"
+            alt=""
+          />
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav">
+          <li>Home</li>
+          <li>About</li>
+          <li>WDIM</li>
+          <li>Company</li>
+          <a class="contact_word" href="./contact.html">
+            <li>Contact</li>
+            
+          </a>
+          
+        </ul>
+        <button class="back_button">
+          Back to main menu
+          <svg
+            class="backArrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="m5.828 7l2.536 2.535L6.95 10.95L2 6l4.95-4.95l1.414 1.415L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 0 0 0-12z"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div class="right_nav">
+        <svg
+          class="search"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="m16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426M10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- actual header for desktop view ends here -->
+
+    <!-- the background image  -->
+    <img class="first_img" src="./assets/images/image.png" alt="" />
+    <!-- The background image ends here -->
+
+    <!-- The animated arrow down -->
+    <div class="mouse_scroll">
+      <div class="mouse">
+        <span class="m_scroll_arrows unu"></span>
+        <span class="m_scroll_arrows doi"></span>
+        <span class="m_scroll_arrows trei"></span>
+      </div>
+    </div>
+    <!-- The animated arrow down ends here -->
+
+    <!-- toggle -->
+    <div class="toggle">
+      <svg
+        class="toogle_img"
+        xmlns="http://www.w3.org/2000/svg"
+        width="2em"
+        height="2em"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M7 17q-2.083 0-3.542-1.457Q2 14.086 2 12.005q0-2.082 1.458-3.543Q4.917 7 7 7h10q2.083 0 3.542 1.457Q22 9.914 22 11.995q0 2.082-1.458 3.543Q19.083 17 17 17zm0-1h10q1.65 0 2.825-1.175T21 12q0-1.65-1.175-2.825T17 8H7Q5.35 8 4.175 9.175T3 12q0 1.65 1.175 2.825T7 16m9.998-1.5q1.04 0 1.771-.728q.731-.729.731-1.77q0-1.04-.728-1.771q-.729-.731-1.77-.731q-1.04 0-1.771.729q-.731.728-.731 1.769t.729 1.771q.728.731 1.769.731M12 12"
+        />
+      </svg>
+    </div>
+    <!-- toggle ends here -->
+
+    <!-- <img class="second_img" src="./assets/images/image 2.png" alt="" /> -->
+
+    <!-- the temporary cards starts here -->
+    <div class="cards">
+      <div class="mission_word">Mission</div>
+      <div class="mission"></div>
+      <div class="Thesis_word">Thesis</div>
+      <div class="thesis"></div>
+      <div class="Story_word">Story</div>
+      <div class="story"></div>
+    </div>
+    <!-- the temporary cards ends here -->
+
+    <!-- footer starts here -->
+    <footer class="footer">
+      <div class="content">
+        <img
+          class="logo_footer"
+          src="./assets/images/Gradient Logo X 1.png"
+          alt=""
+        />
+
+        <div class="content_word">
+          <div>
+            <div class="company">Company</div>
+            <div class="company_content">
+              <p>About</p>
+              <p>WDIM</p>
+            </div>
+          </div>
+          <div class="main_legal">
+            <div class="legal">Legal</div>
+            <div class="legal_content">
+              <p>Cookie Policy</p>
+              <p>Privacy Policy</p>
+              <p>Unsolicited Idea Submission Policy</p>
+              <p>Important Disclosures</p>
+            </div>
+          </div>
+          <div class="contact">Contact Us</div>
+        </div>
+        <div class="socials_main">
+          <img class="socials" src="./assets/images/Vector-4.png" alt="" />
+          <img class="socials" src="./assets/images/Vector.png" alt="" />
+          <img class="socials" src="./assets/images/Vector-3.png" alt="" />
+          <img class="socials" src="./assets/images/Vector-2.png" alt="" />
+          <img class="socials" src="./assets/images/Vector-1.png" alt="" />
+        </div>
+        <div class="line"></div>
+        <div class="Copyright">
+          <div>Copyright</div>
+          <div>
+            <svg
+              class="copyright_img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m-32-88a32 32 0 0 0 57.6 19.2a8 8 0 0 1 12.8 9.61a48 48 0 1 1 0-57.62a8 8 0 0 1-12.8 9.61A32 32 0 0 0 96 128"
+              />
+            </svg>
+          </div>
+          <div>2024 LSGX Limited. All Rights Reserved.</div>
+        </div>
+      </div>
+      <img class="footer_img" src="./assets/images/LSG Background.jpg" alt="" />
+    </footer>
+    <!-- footer ends here -->
+    <script src="./assets/home.js"></script>
+  </body>
+</html>

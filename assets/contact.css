@@ -1,0 +1,411 @@
+@font-face {
+    font-family: Aileron_Bold;
+    src: url(../assets/fonts/Aileron-Font-Webkit/Aileron-Regular.woff);
+    font-weight: bold;
+  }
+@font-face {
+    font-family: Aileron_thin;
+    src: url(../assets/fonts/Aileron-Font-Webkit/Aileron-Light.woff2);
+    font-weight: bold;
+  }
+
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+.actual_logo{
+     width: 50px;
+     margin-left: 6rem;
+     margin-top: 4rem;
+}
+.contact_nav{
+    display: flex;
+  gap: 30px;
+  list-style: none;
+  font-family: Aileron_thin;
+  color: white;
+  margin-left: 3.7rem;
+  margin-top: 4rem;
+  font-size: 17px;
+}
+.whole_main{
+    display: flex;
+    gap: 200px;
+    /* justify-content: center; */
+    /* justify-content: center; */
+}
+.main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* position: absolute; */
+    left: 0%;
+    text-align: left;
+}
+.contact_word{
+    font-size: 50px;
+    margin-top: 70px;
+    font-family: Aileron_bold;
+    margin-left: 3em;
+
+}
+.Europe, .Africa{
+    margin-top: 40px;
+    font-family: Aileron_thin;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 10em;
+}
+.Europe_word, .Africa_word{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.London, .lagos{
+    font-size: 30px;
+    font-family: Aileron_bold;
+    display: none;
+}
+.links{
+    margin-top: 120px;
+    margin-left: 5rem;
+    font-family: Aileron_thin;
+}
+.privacy_two, .privacy_one{
+    text-decoration: underline;
+    margin-top: 5px;
+}
+.copyright{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.copyright_image{
+    margin-top: 18px;
+}
+.first_div{
+    height: 90vh;
+}
+#map{
+    width: 50%;
+    height: 90vh;
+    margin-top: 0%;
+    margin-bottom: -150px;
+    display: flex;
+    position: absolute;
+    z-index: -4;
+    right: 0%;
+
+
+}
+.right_map{
+        right: 10%;
+}
+
+.logo_image{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    /* transform: translate(-50%, -50%); */
+    max-width: 100px;
+
+}
+.footer{
+    margin-top: 100px;
+}
+.footer_img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 75vh;
+    margin-top: 50px;
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    color: white;
+    font-family: Aileron_thin;
+    /* margin-top: 300px; */
+}
+.logo_footer{   
+    width: 120px;
+    object-fit: contain;
+    margin-top: 150px;
+    /* margin-left: 1100px; */
+    float: right;
+    margin-right: 100px;
+}
+.content_word{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 300px;
+    gap: 50px;
+    width: 100%;
+}
+.company, .legal, .contact{
+    font-size: 25px;
+}
+.company_content{
+    line-height: 20px;
+    text-align: left;
+}
+.main_legal{
+    padding-left: 70px;
+}
+.legal_content{
+    line-height: 20px;
+    text-align: left;
+}
+.socials{
+    width: 30px;
+
+}
+.socials_main{
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    margin-right: 100px;
+}
+
+.line{
+height:2px;
+width:80%;
+margin:auto;
+margin-top: 70px;
+margin-bottom: 50px;
+margin-left: 50px;
+background: -moz-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%, rgb(255, 255, 255) 19%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgb(255, 255, 255)), color-stop(19%,rgb(255, 255, 255)), color-stop(80%,rgba(255, 255, 255, 0)), color-stop(100%,rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255)rgba(255, 255, 255, 0),3,0) 80%,rgba(255, 255, 255, 0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#00010101',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.line_head{
+height:2px;
+width:100%;
+margin:auto;
+margin-top: 70px;
+margin-bottom: 50px;
+margin-left: 50px;
+background: -moz-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%, rgb(255, 255, 255) 19%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgb(255, 255, 255)), color-stop(19%,rgb(255, 255, 255)), color-stop(80%,rgba(255, 255, 255, 0)), color-stop(100%,rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255) 19%,rgba(255, 255, 255, 0) 80%,rgba(255, 255, 255, 0) 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  rgb(255, 255, 255) 0%,rgb(255, 255, 255)rgba(255, 255, 255, 0),3,0) 80%,rgba(255, 255, 255, 0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', endColorstr='#00010101',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.Copyright{
+    display: flex;
+    gap: 5px;
+    margin-left: 50px;
+}
+.copyright_img{
+    margin-top: 2px;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+      width: 100%;
+      overflow-x: hidden !important;
+
+    }
+    .actual_logo{
+        width: 30px;
+        margin-left: 5%;
+    }
+    .contact_nav{
+        margin-left: -5%;
+        font-size: 12px;
+        margin-top: 5%;
+    }
+    .line_head{
+        margin: auto;
+        margin-top: 10%;
+        width: 90%;
+    }
+    .contact_word{
+        font-size: 22px;
+    }
+    .Europe, .Africa{
+        /* margin: auto; */
+        margin-left: 70px;
+        
+    }
+    .Europe_word,.Africa_word{
+        font-size: 15px;
+    }
+    .London, .lagos{
+        font-size: 22px;
+    }
+    .links{
+        margin-left: 20px;
+        font-size: 12px;
+    }
+    .copyright_image{
+        margin-top: 13px;
+    }
+    .logo_image{
+        position: absolute;
+        margin-top: 650px;
+        margin-right: 100px;
+        bottom: 0%;
+        width: 20px;
+        z-index: 999;
+    }
+    #map{
+        position: relative;
+        z-index: 9;
+        width: 90%;
+        margin: auto;
+        margin-top: -100px;
+        margin-bottom: -100px;
+    }
+    .whole_main{
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+      width: 100%;
+    }
+    .logo_footer{
+        width: 70px;
+        margin: auto;
+        margin-top: 80px;
+        position: absolute;
+        right: 4%;
+    }
+      .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      overflow-x: hidden !important;
+      }
+      .content_word{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+        overflow-x: hidden !important;
+      }
+      .socials_main{
+        justify-content: center;
+        margin-top: 20px;
+        margin: auto;
+        margin-top: 80px;
+        position: absolute;
+        bottom: 14%;
+        right: 4%;
+      }
+
+      .company{
+        /* text-align: center; */
+        padding-top: 100px;
+        margin-left: 18%;
+        width: 100%;
+        overflow-x: hidden !important;
+      }
+      .company_content{
+        margin-left: 18%;
+        width: 100%;
+        overflow-x: hidden !important;
+      }
+      .contact{
+        margin-left: 18%;
+        overflow-x: hidden;
+        width: 100%;
+        width: 100%;
+        overflow-x: hidden !important;
+      }
+      .socials{
+        width: 20px;
+      }
+      .Copyright{
+        font-size: 15px;
+      }
+
+      .footer_img{
+        height: 80vh;
+        width: 100%;
+        overflow-x: hidden !important;
+      }
+  }
+  @media screen and (min-width: 2000px) {
+    body {
+      overflow-x: hidden;
+    }
+    .logo_footer{
+        width: 100px;
+        margin-top: 150px;
+
+        float: right;
+    }
+      .content{
+
+        width: 100%;
+
+      }
+      .content_word{
+        display: flex;
+        gap: 100px;
+  
+        margin-top: 10px;
+        font-size: 25px;
+
+      }
+      .socials_main{
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .first_img{
+        height: 80vh;
+      }
+      .footer{
+        width: 100%;
+      }
+      .company{
+
+        margin-left: 18%;
+      }
+      .company_content{
+        margin-left: 18%;
+      }
+      .company, .legal, .contact{
+        font-size: 40px;
+    }
+ .company_content, .legal_content{
+  line-height: 70px;
+ }
+      .socials_main{
+        display: flex;
+        gap: 30px;
+        justify-content: end;
+      }
+      .socials{
+        width: 40px;
+      }
+
+      .Copyright{
+        font-size:25px;
+      }
+      .footer_img{
+        height: 70vh;
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .line{
+        display: block;
+        height: 3px;
+        margin-top: 100px;
+      }
+    }
