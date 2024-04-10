@@ -138,6 +138,7 @@ box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.037);
 
   /* margin-top: 0px; */
 }
+
 .main_nav{
     display: flex;
 }
@@ -304,6 +305,64 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a0a0a', end
 }
 .copyright_img{
     margin-top: 2px;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .0em .5em;
+  padding: 0;
+}
+
+.nav a {
+  padding: .1em .4em;
+  /* color: rgba(255,255,255,.5); */
+  position: relative;
+  text-decoration: none;
+  /* font-size: 20px; */
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #003d42;
+  border-right: 3px solid #006848;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #003d42;
+  border-left: 3px solid #006848;
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #006848;
 }
 *,
 *:before,
